@@ -1,0 +1,45 @@
+Notes/Planning
+
+Order Of Completion
+-First, Navbar using React-Bootstrap
+
+Use
+-uuid so we have an ID to reference objects (might not be neccesary if we dont need to interact with a specific object from the parent)
+-TODO: Checkout how to do responsive design using react
+    -Look at mongodb integration
+    -React transition DOM
+-TODO: Working with NodeJS Backend
+
+Main App
+-Contructor should import main state data
+    -Projects data
+    -
+
+Hierarchy
+
+App
+-Header bar
+    -One mobile one standard; swap based off the size of the screen
+-Projects
+    -Project Item
+    -Populated via "project" item folders on the server
+-Resume section
+    -Feature a link
+    -This can be hardcoded for now
+    -Maybe eventually see about having it generate based off the word doc?
+        -Want to tie it into my actual resumes
+-Basic Contact section
+
+-Eventual Add ons:
+    -Dynamic social media links for LinkedIn/GitHub
+        -Pull live stats?
+    -Some kind of live interaction thing: 
+        -Can add a message on a sticky note to a board (gets cleared after a week?)
+        -Adds rows to a DB somewhere which gets pulled
+        -Use animations to animate parts
+        -Drag and drop?
+    
+DB Schema
+-Projects Table
+    -Title/Project Name, Summary, Github link, Alt Link
+    
