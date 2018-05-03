@@ -1,0 +1,55 @@
+img {
+    width:100%;
+}
+
+.itemBox{
+    display: flex;
+    overflow: hidden;
+    border: 2px solid rgba((158, 158, 158, 0.411), 74%);
+    margin:0px;
+}
+
+.itemBox h3{
+    margin:0px;
+}
+
+.itemThumbnail {
+    margin: 10px 10px;
+    padding:0;
+}
+
+.imageGradient{
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+    width:20%;
+    background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, #ebf4fc 80%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,#ebf4fc));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #ebf4fc 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ebf4fc',GradientType=0 );
+}
+
+.itemInfo{
+    height: 100%;
+    margin: 10px 0px;
+}
+
+.fadeOut {
+    position: relative;
+    height: 3.6em;
+  }
+
+.fadeOut:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
+}
