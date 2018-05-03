@@ -1,0 +1,18 @@
+.MyNavbar {
+    background: #0a2845;
+    border-radius: 0px;
+}
+
+.MyNavbar-Brand{
+   font-family: 'Junction';
+   font-size: 24px;
+}
+
+#header-p1{
+    color:#000;
+    display: inline;
+}
+
+#header-p2{
+    display: inline;
+}
