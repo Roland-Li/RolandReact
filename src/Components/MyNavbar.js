@@ -17,6 +17,7 @@ class MyNavbar extends Component {
         //         );
         //     });
         // }
+        
         return (
             <Navbar inverse collapseOnSelect className="MyNavbar">
                 <Navbar.Header>
