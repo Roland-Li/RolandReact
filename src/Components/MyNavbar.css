@@ -3,16 +3,43 @@
     border-radius: 0px;
 }
 
+/* Logo/Brand stuff ______________________________________________________*/
 .MyNavbar-Brand{
    font-family: 'Junction';
    font-size: 24px;
 }
 
+.MyNavbar-Brand:hover{
+    animation: Brand-Expand 1 0.1s ease-in forwards;
+}
+
+@keyframes Brand-Expand {
+    from { transform: scale(1.0,1.0); }
+    to { 
+        transform: scale(1.04,1.04); 
+        animation-play-state: paused; 
+    }
+    }
+    
+
+.MyNavbar-Brand:hover #header-p1{
+    color:#3a8ee2;
+}
+
+.MyNavbar-Brand:hover #header-p2, .MyNavbar-Brand:hover #header-p3{
+    color:#fff;
+}
+
 #header-p1{
-    color:#000;
+    color:#1b68b5;
     display: inline;
 }
 
 #header-p2{
     display: inline;
+}
+
+#header-p3{
+    display:inline;
+    font-size: 16px;
 }
