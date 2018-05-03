@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: 'BloggerSans',Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   background-color: #ebf4fc;
-  line-height: 150%; /* Recommended line-height */
 }
 
 /* Recommended Font Sizes: 8, 16, 24, 32, 48, 64, 95 */
@@ -30,6 +29,7 @@ h4 {
 p {
   color: #333;
   font-size: 8px;
+  line-height: 150%; 
 }
 
 /* unvisited link */

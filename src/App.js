@@ -20,7 +20,7 @@ class App extends Component {
         tags: [ "hackathon" , "social-good" , "website" , "team" ],
         languages_used: [ "C#" ],
         tools_used: [ "Unity", "IBM-Watson" ],
-        year: "2017",
+        date: "20170100", //YYYYMMDD. Split and convert manually for display, store like this for easy sorting
         title: 'bridgED',
         project_description: 'Real-time image analysis and language translation, combined with AR, to allow labelling of objects around the user.',
         work_description: '',
