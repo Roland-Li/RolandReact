@@ -9,6 +9,7 @@ export default class ProjectsContainer extends Component {
         super(props, context);
         this.handleSearchChange = this.handleSearchChange.bind(this);
         this.onClickProject = this.onClickProject.bind(this);
+        //this.updateSelectedProjects = this.updateSelectedProjects.bind(this);
     
         this.state = {
           searchText: '',
@@ -18,42 +19,67 @@ export default class ProjectsContainer extends Component {
         };
     } 
 
-    updateSelectedProjects(){
-
-    }
-
     getValidationState() {
         //Check whether or not there are valid projects fitting this,
         //and update the selected projects list accordingly
-        const length = this.state.searchText.length;
+        const length = this.state.selectedProjects.length;
+
         if (length == 0){
-            if (this.state.showSearchWarning != 'False') {
-                this.setState({ showSearchWarning: 'False'});
-            }
-            return null;
-        }
-        else if (length > 10) {
-            //Have to if check or else it'll recurse
-            if (this.state.showSearchWarning != 'False') {
-                this.setState({ showSearchWarning: 'False'});
-            }
-            return 'success';
-        }
-        else {
             if (this.state.showSearchWarning != 'True') {
                 this.setState({ showSearchWarning: 'True'});
             }
             return 'error'; 
         }
+        else  {
+            //Have to if check or else it'll recurse
+            if (this.state.showSearchWarning != 'False') {
+                this.setState({ showSearchWarning: 'False'});
+            }
+            return null;
+        }
+    }
+
+    updateSelectedProjects(newSearchText){
+        //Loop through the projects list and select the ones matching the searchText
+        var newSelectedProjects = [];
+        for (var i = 0, len = this.state.projects.length; i < len; i++) { 
+            //Check the title
+            if (this.state.projects[i].title.toLowerCase().startsWith(newSearchText)){
+                console.log("Matching prefix of title");
+                newSelectedProjects.push(this.state.projects[i]);
+                continue;
+            }
+
+            //Check tags
+            for (var j = 0, len2 = this.state.projects[i].tags.length; j < len2; j++){
+
+            }
+        }
+
+        //Update
+        this.setState({selectedProjects: newSelectedProjects});
     }
 
     handleSearchChange(e) {
-        this.setState({ searchText: e.target.value });
-        this.updateSelectedProjects();
+        var newSearchText = e.target.value.toLowerCase();
+        this.setState({ searchText: newSearchText });
+
+        if (newSearchText.length > 0){
+            //Pass it so it's faster than waiting for updated state value
+            this.updateSelectedProjects(newSearchText);
+        }
+        else {
+            //Reset back to showing all
+            this.setState({selectedProjects: this.state.projects});
+        }
     }
 
     onClickProject(proj){
         console.log(proj);
+    }
+
+    onSubmitSearch(e){
+        e.preventDefault();
     }
     
     // id:1,
@@ -79,7 +105,7 @@ export default class ProjectsContainer extends Component {
             <Grid>
             <Row className="show-grid">
                 <Col xs={12} md={12}>
-                <form>
+                <form onSubmit={this.onSubmitSearch}>
                     <FormGroup
                         controlId="formBasicText"
                         validationState={this.getValidationState()}
@@ -89,6 +115,13 @@ export default class ProjectsContainer extends Component {
                         value={this.state.searchText}
                         placeholder="Filter projects via title, tags, language, etc"
                         onChange={this.handleSearchChange}
+                        onSubmit={(e) => {
+                            /**
+                            * Prevent submit from reloading the page
+                            */
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }}
                     />
                     <FormControl.Feedback />
                     <HelpBlock>{ this.state.showSearchWarning == 'True' ? 'No projects match with your query.' : ''} </HelpBlock>
