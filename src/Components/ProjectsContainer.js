@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProjectItem from './ProjectItem'
 import {Grid,Row, Col, Clearfix, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap'; //Everything is going to want to use grids
 import "./ProjectContainer.css"
 //Wireframe 1: https://wireframe.cc/6Buzm0
@@ -7,6 +8,7 @@ export default class ProjectsContainer extends Component {
     constructor(props, context) {
         super(props, context);
         this.handleSearchChange = this.handleSearchChange.bind(this);
+        this.onClickProject = this.onClickProject.bind(this);
     
         this.state = {
           searchText: '',
@@ -14,8 +16,6 @@ export default class ProjectsContainer extends Component {
           projects: props.projects,
           selectedProjects: props.projects
         };
-        
-        console.log(this.state.projects);
     } 
 
     updateSelectedProjects(){
@@ -51,6 +51,10 @@ export default class ProjectsContainer extends Component {
         this.setState({ searchText: e.target.value });
         this.updateSelectedProjects();
     }
+
+    onClickProject(proj){
+        console.log(proj);
+    }
     
     // id:1,
     // tags: [ "hackathon" , "social-good" , "website" , "team" ],
@@ -67,16 +71,7 @@ export default class ProjectsContainer extends Component {
     
     render (){
         const projectObjects = this.state.selectedProjects.map( (proj) => 
-        <Row className='itemBox'> 
-            <Col xs={3} md={3} className='itemThumbnail'>
-                <img src={require("../Project_Images/" + proj.images[0])}/>
-                <div className="imageGradient"></div>
-            </Col>
-            <Col xs={9} md={9} className='itemInfo'>
-                <Row><h3>{proj.title}</h3></Row>
-                <Row><p className='fadeOut'>{proj.project_description}</p></Row>
-            </Col>
-        </Row>
+            <ProjectItem project={proj} onClickProject={this.onClickProject} />
         );
 
         return(

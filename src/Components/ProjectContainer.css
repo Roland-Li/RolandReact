@@ -1,21 +1,37 @@
-img {
-    width:100%;
+/* Generic Special Styling _____________________________________________________ */
+.lightText{
+    color: #7cb4eb;
 }
 
+/* Selectable Item Box _____________________________________________________ */
 .itemBox{
     display: flex;
     overflow: hidden;
-    border: 2px solid rgba((158, 158, 158, 0.411), 74%);
+    border: 2px solid #feffff;
     margin:0px;
+    height:120px;
 }
 
-.itemBox h3{
+.itemBox:hover{
+    border: 2px solid #bdd9f5;
+}
+
+.itemBox h3, .topTags{
+    display:inline;
+}
+
+.itemBox h3, .itemBox p{
     margin:0px;
 }
 
 .itemThumbnail {
-    margin: 10px 10px;
+    margin:0 0;
     padding:0;
+}
+
+.itemThumbnail img {
+    width:100%;
+    height:100%;
 }
 
 .imageGradient{
@@ -35,13 +51,15 @@ img {
 
 .itemInfo{
     height: 100%;
-    margin: 10px 0px;
+    margin: 10px 10px;
 }
 
+/* Text Fade Out */
 .fadeOut {
     position: relative;
-    height: 3.6em;
-  }
+    height: 2.8em;
+    overflow:hidden;
+}
 
 .fadeOut:after {
     content: "";
@@ -49,7 +67,11 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 70%;
-    height: 1.2em;
+    width: 30%;
+    height: 1.4em;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
+}
+
+.bottomTags{
+    text-align: right;
 }
