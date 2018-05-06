@@ -43,9 +43,10 @@ export default class ProjectsContainer extends Component {
         //Loop through the projects list and select the ones matching the searchText
         var newSelectedProjects = [];
         for (var i = 0, len = this.state.projects.length; i < len; i++) { 
+            console.log("checking " + this.state.projects[i].title); 
             //Check the title
             if (this.state.projects[i].title.toLowerCase().startsWith(newSearchText)){
-                console.log("Matching prefix of title");
+                console.log("Matching " + this.state.projects[i].title);
                 newSelectedProjects.push(this.state.projects[i]);
                 continue;
             }
@@ -57,20 +58,22 @@ export default class ProjectsContainer extends Component {
         }
 
         //Update
-        this.setState({selectedProjects: newSelectedProjects});
+        console.log("New Selected Projects: ", newSelectedProjects);
+        return newSelectedProjects;
     }
 
     handleSearchChange(e) {
         var newSearchText = e.target.value.toLowerCase();
-        this.setState({ searchText: newSearchText });
 
         if (newSearchText.length > 0){
             //Pass it so it's faster than waiting for updated state value
-            this.updateSelectedProjects(newSearchText);
+            var newSelectedProjects = this.updateSelectedProjects(newSearchText);
+            
+            this.setState({selectedProjects: newSelectedProjects, searchText: newSearchText }, () => console.log(this.state));
         }
         else {
             //Reset back to showing all
-            this.setState({selectedProjects: this.state.projects});
+            this.setState({selectedProjects: this.state.projects, searchText: newSearchText });
         }
     }
 
@@ -96,9 +99,9 @@ export default class ProjectsContainer extends Component {
     // link_generic:"https://devpost.com/software/what-s-it"
     
     render (){
-        const projectObjects = this.state.selectedProjects.map( (proj) => 
-            <ProjectItem project={proj} onClickProject={this.onClickProject} />
-        );
+        const projectObjects = this.state.selectedProjects.map( (proj) => {
+            return <ProjectItem project={proj} onClickProject={this.onClickProject} />
+        });
 
         return(
            <div>

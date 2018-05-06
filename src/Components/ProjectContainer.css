@@ -9,6 +9,7 @@
     overflow: hidden;
     border: 2px solid #feffff;
     margin:0px;
+    margin-bottom:10px;
     height:120px;
 }
 
@@ -49,25 +50,41 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ebf4fc',GradientType=0 );
 }
 
+.itemTitle{
+    height: 2em;
+    overflow: hidden;
+}
+
+.itemTitle:after{
+    content: "";
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
+}
+
 .itemInfo{
     height: 100%;
     margin: 10px 10px;
 }
 
 /* Text Fade Out */
-.fadeOut {
+.itemDescription {
     position: relative;
     height: 2.8em;
     overflow:hidden;
 }
 
-.fadeOut:after {
+.itemDescription:after {
     content: "";
     text-align: right;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 30%;
+    width: 15%;
     height: 1.4em;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
 }
