@@ -1,0 +1,78 @@
+[
+    {
+    "id":1,
+    "tags": [ "hackathon" , "social-good" , "mobile-app" , "team" , "award" ],
+    "languages_used": [ "C#" ],
+    "tools_used": [ "Unity", "IBM-Watson" ],
+    "date": "20171118",
+    "title": "bridgED - Hack Western W2017",
+    "project_description": "Real-time image analysis and language translation of everyday objects and signs. Our app is designed to fit two goals. 1: With integrated wiki access, allow users to learn about the objects around them. 2: Combining AR, our app allows foreigners to quickly understand what objects are, and refer to them with ease- especially helpful for ambiguous/culturally specific items, and road signs.",
+    "work_description": "Coming up with the idea, I helped lead the team towards developing an application that would accomplish the goal of helping newly immigrated Canadians. For the app, I worked primarily on the AR portion of the application, utilizing libraries and putting together a simple Unity app.",
+    "learn_description": "While I had worked with Unity in the past, I never worked on getting the very foundations done. Besides having to learn how to integrate new libraries, I feel like it was at this Hackathon that I really concreted what was necessary to win. Our work process was messy at places, as we had to figure things out on the fly. However, I think I have a better idea as to what a good workflow would be for the future. I was very fortunate to have a diligent team as well!",
+    "images": [ "bridgED1.png", "bridgED2.png" ],
+    "link_git": "",
+    "link_generic": "https://devpost.com/software/what-s-it",
+    "awards":[ "Best Use of IBM Watson Visual Recognition API" , "Best Hack for Empowering Diversity through Design and Technology" ]
+    },
+    {
+    "id":2,
+    "tags": [ "hackathon" , "front-end" , "website" , "team", "award" ],
+    "languages_used": [ "JavaScript", "html" , "php" ],
+    "tools_used": [ "phpMyAdmin" ],
+    "date": "20170917",
+    "title": "coincise - Hack the North W2017",
+    "project_description": "A cryptocurrency portfolio management tool. Using deep learning algorithms, our machine learning bot analyzes historical data in order to predict whether or not a coin will rise or fall in the short run, providing a basic recommendation for the user as to whether they should buy or sell. The goal is to provide an extension to Coinbase's existing services and provide better financial management tools for users to earn.",
+    "work_description": "With a teammate experienced in machine learning, I took the role of team lead and brainstormed it's best application. Thinking from the perspective of Coinbase, I laid out features we'd need and the packaging to make it appealing for an award. I did the front-end management, writing and designing our site.",
+    "learn_description": "This was my first serious hackathon- while I did one before, I came into this with the goal of winning. I've only done minimal web-dev in the past. Although our demo site wasn't too complicated, this was my first taste of delving into more complicated libraries like chart-generators and handling asynchronous data calls to other servers.",
+    "images": [ "coincise1.png" , "coincise2.png" ],
+    "link_git":"",
+    "link_generic":"https://devpost.com/software/coincise",
+    "awards":[ "Coinbase Sponsor Award" ]
+    },
+    {
+    "id":3,
+    "tags": [ "hackathon" , "back-end" , "social-good", "website" , "team", "award" ],
+    "languages_used": [ "JavaScript" ],
+    "tools_used": [ "stdlib" , "REST" ],
+    "date": "20180205",
+    "title": "Search and Protect - QHacks 2018",
+    "project_description": "A mental health monitoring tool usable for suicide prevention groups. Using sentiment analysis, we score Twitter user's negativity and overall tendency to self-harm. The site's management group gets notified of this. Then, using our personality profiling and key-word summaries, the administrator will be able to have a more guided conversation with the user. Using our built-in extension, they can directly DM the user through the group's twitter account and start a conversation. The tool additionally has an automated contact for high-risk individuals, encouraging them to seek help.",
+    "work_description": "Dividing up tasks, our more experienced member took on the role of designing our React front-end. I worked closely with him throughout the project as I designed the back-end, feeding him the data to display. This included incorporating multiple APIs, processing and passing data between them. These functions were hosted on stdlib, one of the hackathon's sponsors. Our other two members supported us, searching up documentation, coding portions of what we needed, and helping us setup the infrastructure.",
+    "learn_description": "This gave me a chance to really work seriously with JavaScript and use it for more serious programming. I had to learn how to use large REST API libraries on my own in a short period of time- including Twitter's and IBM Watson's. I also had to learn how to deal with more difficult team members, which was a first for me.",
+    "images": [ "searchandprotect1.jpg" , "searchandprotect2.jpg" ],
+    "link_git":"https://github.com/RunEMC/SearchAndPro.tech",
+    "link_generic":"https://devpost.com/software/qhacks-2018",
+    "awards":[ "Top-5 Finalist" ]
+    },
+    {
+    "id":4,
+    "tags": [ "website" , "front-end", "solo" ],
+    "languages_used": [ "JavaScript" , "html" , "php" ],
+    "tools_used": [ "Online Tutorials" ],
+    "date": "20160924",
+    "title": "Personal Site - V1",
+    "project_description": "The first version of my personal website. This was my first serious venture into redesign, where I worked closely with the HTML and CSS. The site features basic details, including a projects session, a resume section, a personal summary, and contact section. The webform would route mail directly to my personal account. This was me getting my feet wet.",
+    "work_description": "I had to learn how to do everything from scratch. How and where to host a site, the fundamentals of HTML/CSS/JS, the workflow, the pain of designing using CSS properties. Ultimately the thing that took me the longest with this was getting used to html/CSS design and getting my layouts the way I envision.",
+    "learn_description": "A lot about patience learning on your own. Basic web-design practices otherwise.",
+    "images": [ "personalsite1.png" , "personalsite2.png" ],
+    "link_git":"https://github.com/RunEMC/SearchAndPro.tech",
+    "link_generic":"https://devpost.com/software/qhacks-2018",
+    "awards":[ ]
+    },
+    {
+    "id":5,
+    "tags": [ "mobile-application" , "front-end", "co-op" , "game" ],
+    "languages_used": [ "C#" ],
+    "tools_used": [ "Unity" ],
+    "date": "20160724",
+    "title": "Gamestudio Trillionaire",
+    "project_description": "A satirical clicker game on running your own game studio. Packaged in quirky manner with jokes regarding common tropes of the industry and overall fun aesthetic. Collect absurd amounts of money, beyond 10^24 (I forget our specific cap). Designed in Unity, our multi-platform game was released on Kongregate, iOS and Android. On Android, it accumulated over 100k downloads and had an average rating of 4.3! Unfortunately, the company has since chosen to remove many of their lesser titles, and Game Studio Trillionaire is no longer available. I do however, have an APK of the game saved (linked below).",
+    "work_description": "One of the most personally ambitious projects I got to work on at Clipwire Games- in the sense that I personally lead most of the creative process. It was intended to simply be a test game for our new tools and workflow, but I enjoyed working on it and asked to continue adding more features. Pitching these ideas to our CEO, I continued to develop and work with our art designer for new assets. I did everything else- from modifying our math calculations, changing the user data we store, wireframing features, designing new menus, coding UI functionality, animating events, writing the jokes, balancing the game, debugging, putting it up on the app store. Nearly everything!",
+    "learn_description": "This was a big responsibility for me, and I got to take on more than I usually do. Before this, I normally would focus on adding UI, basic front-end based features, and debugging. Our company was small and the others were generally busy, so I had to learn much on my own. I think it was a this point that I could confidently say, that I had experienced the entire development cycle of an application, first-hand. ",
+    "images": [ "gamestudio1.jpg" , "gamestudio2.jpg" ],
+    "link_git":"",
+    "link_generic":"",
+    "awards":[ ]
+    }
+]
+
