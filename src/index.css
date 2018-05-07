@@ -6,6 +6,10 @@ body {
 }
 
 /* Recommended Font Sizes: 8, 16, 24, 32, 48, 64, 95 */
+.highlight{
+  color: #3a8ee2;
+}
+
 h1{
   color: #103c68;
   font-size: 48px;

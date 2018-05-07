@@ -32,34 +32,47 @@ export default function ProjectDisplay(props) {
                 </Col>
             </Row>
             <Row>
-                <Col xs={12} md={4}>
+                <Col xs={12}>
                    <img src={require("../Project_Images/" + props.project.images[0])}/>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={12}>
-                   <p><b>Languages I Used:</b> {props.project.languages_used.join(", ")}</p>
+            <Row className='listSection'>
+                <Col xs={12} md={2}>
+                    <h3>What I Used</h3>
                 </Col>
-                <Col xs={12}>
-                   <p><b>Tools I Used:</b> {props.project.tools_used.join(", ")}</p>
-                </Col>
+                <Col xs={12} md={10}>
+                    <i class="material-icons">code</i>
+                    <h3 className='highlight'>{props.project.languages_used.join(", ")}</h3>
+                    <i class="material-icons">build</i>
+                    <h3 className='highlight'>{props.project.tools_used.join(", ")}</h3>
+                </Col>   
             </Row>
             <Row>
-                <Col xs={12}>
-                    <h3>What it is</h3>
+                <Col xs={12} md={2}>
+                    <h3>What It Was</h3>
+                </Col>
+                <Col xs={12} md={10}>
                     <p>{props.project.project_description}</p>
-                </Col>
+                </Col>            
             </Row>
             <Row>
-                <Col xs={12}>
-                    <h3>What I did</h3>
+                <Col xs={12} md={2}>
+                     <h3>What I Did</h3>
+                </Col>
+                <Col xs={12} md={10}>
                     <p>{props.project.work_description}</p>
-                </Col>
+                </Col>   
             </Row>
             <Row>
-                <Col xs={12}>
-                    <h3>What I learned</h3>
+                <Col xs={12} md={2}>
+                    <h3>What I Learned</h3>
+                </Col>
+                <Col xs={12} md={10}>
                     <p>{props.project.learn_description}</p>
+                </Col> 
+                <Col xs={12}>
+
+
                 </Col>
             </Row>
         </Grid>

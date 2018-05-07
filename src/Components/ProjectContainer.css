@@ -6,9 +6,10 @@
 
 /* Project Container/Box Layouts _____________________________________________________ */
 .projectWindow{
-    height: 78vh;
+    height: 80vh;
     overflow-y: scroll;
-    overflow-x: hidden
+    overflow-x: hidden;
+    padding-right:0px;
 }
 
 /* Project Display Layout _____________________________________________________ */
@@ -18,6 +19,25 @@
 
 .displayBox img {
     width:100%;
+    margin-bottom:10px;
+}
+
+.displayBox h2, .displayBox h3{
+    text-align: center;
+}
+
+.displayBox h3{
+    margin:0;
+    margin-top:5px;
+}
+
+.displayBox .listSection .highlight{
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 5px;
+}
+
+.listSection{
     margin-bottom:10px;
 }
 

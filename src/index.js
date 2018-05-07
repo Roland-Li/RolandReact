@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
 <div>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
     <App /> 
 </div>
 , document.getElementById('root')
