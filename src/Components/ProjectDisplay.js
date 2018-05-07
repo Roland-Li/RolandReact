@@ -8,6 +8,7 @@ export default function ProjectDisplay(props) {
         props.onClickProject(-1);
     }
 
+    // Example of data:
     // id:1,
     // tags: [ "hackathon" , "social-good" , "website" , "team" ],
     // languages_used: [ "C#" ],
@@ -20,15 +21,30 @@ export default function ProjectDisplay(props) {
     // images: [ "test.png" , "test2.png" ],
     // link_git:"",
     // link_generic:"https://devpost.com/software/what-s-it"
+    var awardSection;
+    if (props.project.awards != undefined && props.project.awards.length != 0){
+        awardSection = (
+            <Row className='awardSection'>
+                <Col xs={12} md={2}>
+                    <h3 className='header'>What I Won</h3>
+                </Col>
+                <Col xs={12} md={10}>
+                    <h3 className='highlight'><i class="material-icons">star</i>{props.project.awards.join(", ")}</h3>
+                </Col>      
+            </Row>
+        );
+    }
+    else {
+        awardSection = null;
+    }
     
-    console.log(props);
 
     return(
         <Grid className='displayBox'> 
             <Row>
                 <Col xs={12}>
                   <h2>{props.project.title}</h2>
-                  <Button className='exitButton' onClick={handleClick} bsStyle='primary'>X</Button>
+                  <Button className='exitButton' onClick={handleClick} bsStyle='primary'><h3>X</h3></Button>
                 </Col>
             </Row>
             <Row>
@@ -36,16 +52,15 @@ export default function ProjectDisplay(props) {
                    <img src={require("../Project_Images/" + props.project.images[0])}/>
                 </Col>
             </Row>
+            {awardSection}
             <Row className='listSection'>
                 <Col xs={12} md={2}>
                     <h3>What I Used</h3>
                 </Col>
                 <Col xs={12} md={10}>
-                    <i class="material-icons">code</i>
-                    <h3 className='highlight'>{props.project.languages_used.join(", ")}</h3>
-                    <i class="material-icons">build</i>
-                    <h3 className='highlight'>{props.project.tools_used.join(", ")}</h3>
-                </Col>   
+                    <h3 className='highlight'><i class="material-icons">code</i>{props.project.languages_used.join(", ")}</h3>
+                    <h3 className='highlight'><i class="material-icons">build</i>{props.project.tools_used.join(", ")}</h3>
+                </Col>
             </Row>
             <Row>
                 <Col xs={12} md={2}>
@@ -71,9 +86,12 @@ export default function ProjectDisplay(props) {
                     <p>{props.project.learn_description}</p>
                 </Col> 
                 <Col xs={12}>
-
-
                 </Col>
+            </Row>
+            <Row>
+            <Col xs={12}>
+                <p className='tags'>Search tags: {props.project.tags.join(", ")}</p>
+            </Col>
             </Row>
         </Grid>
     )

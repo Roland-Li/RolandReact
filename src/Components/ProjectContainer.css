@@ -34,7 +34,29 @@
 .displayBox .listSection .highlight{
     display: inline-block;
     padding-right: 20px;
-    padding-left: 5px;
+}
+
+.displayBox i{
+    color: #333;
+    padding-right:5px;
+}
+
+.displayBox .tags{
+    color: #bdd9f5;
+    text-align: center;
+}
+  
+.awardSection{
+    margin-bottom:10px;
+}
+
+
+.awardSection .highlight{
+    display: inline-block;
+}
+
+.awardSection .header{
+    margin-top:10px;
 }
 
 .listSection{
@@ -47,6 +69,11 @@
     width: 40px;
     height: 40px;
     position: absolute;
+    background-color: #3a8ee2;
+}
+
+.exitButton h3{
+    margin-top:3px;
 }
 
 
@@ -117,6 +144,7 @@
 .itemInfo{
     height: 100%;
     margin: 10px 10px;
+    padding: 10px;
 }
 
 /* Text Fade Out */
