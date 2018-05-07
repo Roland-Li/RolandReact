@@ -3,7 +3,35 @@
     color: #7cb4eb;
 }
 
-/* Selectable Item Box _____________________________________________________ */
+
+/* Project Container/Box Layouts _____________________________________________________ */
+.projectWindow{
+    height: 78vh;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+/* Project Display Layout _____________________________________________________ */
+.displayBox{
+    border: 2px solid #feffff;
+}
+
+.displayBox img {
+    width:100%;
+    margin-bottom:10px;
+}
+
+.exitButton{
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+
+
+/* Project Selection Item Layout _____________________________________________________ */
 .itemBox{
     display: flex;
     overflow: hidden;

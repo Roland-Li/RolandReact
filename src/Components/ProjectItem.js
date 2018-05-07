@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Grid,Row, Col, Clearfix, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap'; //Everything is going to want to use grids
+import {Grid,Row,Col} from 'react-bootstrap'; //Everything is going to want to use grids
 
 
 export default function ProjectItem(props) {
     function handleClick(e) { 
-        props.onClickProject(props.project)
+        props.onClickProject(props.rowID)
     }
 
     return(
