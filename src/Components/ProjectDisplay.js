@@ -23,13 +23,18 @@ export default function ProjectDisplay(props) {
     // link_generic:"https://devpost.com/software/what-s-it"
     var awardSection;
     if (props.project.awards != undefined && props.project.awards.length != 0){
+        
+        const awardObjects = props.project.awards.map( (award) => {
+            return <h3 className='highlight'><i class="material-icons">star</i>{award}</h3>
+        });
+
         awardSection = (
             <Row className='awardSection'>
                 <Col xs={12} md={2}>
                     <h3 className='header'>What I Won</h3>
                 </Col>
                 <Col xs={12} md={10}>
-                    <h3 className='highlight'><i class="material-icons">star</i>{props.project.awards.join(", ")}</h3>
+                    {awardObjects}
                 </Col>      
             </Row>
         );

@@ -1,22 +1,22 @@
 Order of next tasks:
--Finish up project selection area
-    -Generate project data. This will be more or less be the final stuff.
+-Project Selection Area
     -Add advanced filtering. Split the input, store into variables, multistage.
-        -Search optimization? Don't use base projects group each time, use previously filtered list.
-    -Scrollable project list within the same window
--Add project detail display functionality
-    -Hide the searchbar/list (slide it out for new view? Otherwise make it a modal...)
-    -Display the data in a well formatted way
-    -Have a "back" button to return to the previous view.
--Make the project section scale for mobile
-    -Reduce the amount of info in the selector items
-    -Alternating/scrolling images
--Resume section
+        -Search optimization? Don't use base projects group each time, use previously filtered list.\
+-Project View Area
+    -Add links for projects if defined
+-Resume View
     -Include link for PDF
     -Figure out specifics; maybe just embed the PDF somehow
--Contacts section
+-Contact View
     -Need a backend to send out emails?
     -Social media stuff etc
+-Misc
+    -Draw a new icon for the website (SVG?)
+
+Projects to add:
+-Automating with rundeck
+-This website
+ 
 
 Stretch:
 -Push the project data onto a DB and pull it

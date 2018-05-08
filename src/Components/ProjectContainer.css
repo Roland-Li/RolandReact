@@ -10,7 +10,15 @@
     overflow-y: scroll;
     overflow-x: hidden;
     padding-right:0px;
+    padding: 0 15px;
 }
+
+@media only screen and (min-width: 768px) {
+    .projectWindow{
+        padding-right:0px;
+    }
+}
+
 
 /* Project Display Layout _____________________________________________________ */
 .displayBox{
@@ -20,6 +28,10 @@
 .displayBox img {
     width:100%;
     margin-bottom:10px;
+}
+
+.displayBox h2 {
+    padding: 0px 40px;
 }
 
 .displayBox h2, .displayBox h3{
@@ -96,17 +108,17 @@
     display:inline;
 }
 
-.itemBox h3, .itemBox p{
-    margin:0px;
+.itemBox p{
+    margin-bottom:0px;
 }
 
 .itemThumbnail {
     margin:0 0;
     padding:0;
+    overflow: hidden;
 }
 
 .itemThumbnail img {
-    width:100%;
     height:100%;
 }
 
@@ -167,4 +179,5 @@
 
 .bottomTags{
     text-align: right;
+    margin-right:10px;
 }
