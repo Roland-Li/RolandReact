@@ -88,7 +88,21 @@
     margin-top:3px;
 }
 
+.linkSection{
+    text-align:center;
+}
 
+.linkSection h4{
+    display:inline;
+}
+
+.linkSection a:hover i{
+    color: rgb(222, 222, 222);
+}
+
+a i {
+    margin-right:10px;
+}
 
 /* Project Selection Item Layout _____________________________________________________ */
 .itemBox{

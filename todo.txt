@@ -1,9 +1,12 @@
-Order of next tasks:
+Next Tasks:
 -Project Selection Area
     -Add advanced filtering. Split the input, store into variables, multistage.
-        -Search optimization? Don't use base projects group each time, use previously filtered list.\
+        -Search optimization? Don't use base projects group each time, use previously filtered list.
+    -Make the page as whole scale better to higher resolutions 
+        -Navbar and project selection areas are too small
+        -Image is too small now, though it maintains ratio; which is good. Add second image?
 -Project View Area
-    -Add links for projects if defined
+    -Done for now
 -Resume View
     -Include link for PDF
     -Figure out specifics; maybe just embed the PDF somehow
@@ -16,7 +19,7 @@ Order of next tasks:
 Projects to add:
 -Automating with rundeck
 -This website
- 
+
 
 Stretch:
 -Push the project data onto a DB and pull it

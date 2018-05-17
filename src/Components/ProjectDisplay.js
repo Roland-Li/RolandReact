@@ -21,11 +21,12 @@ export default function ProjectDisplay(props) {
     // images: [ "test.png" , "test2.png" ],
     // link_git:"",
     // link_generic:"https://devpost.com/software/what-s-it"
-    var awardSection;
+
+    var awardSection = null;
     if (props.project.awards != undefined && props.project.awards.length != 0){
         
         const awardObjects = props.project.awards.map( (award) => {
-            return <h3 className='highlight'><i class="material-icons">star</i>{award}</h3>
+            return <h3 className='highlight'><i className="material-icons">star</i>{award}</h3>
         });
 
         awardSection = (
@@ -39,10 +40,26 @@ export default function ProjectDisplay(props) {
             </Row>
         );
     }
-    else {
-        awardSection = null;
+
+    var gitLink = null;
+    if (props.project.link_git != ""){
+        gitLink= ( 
+            <a href={props.project.link_git} target="_blank">
+                <h4>Repository</h4>
+                <i className="material-icons">link</i>
+            </a>
+        );
     }
-    
+
+    var genLink = null;
+    if (props.project.link_generic != ""){
+        genLink= ( 
+            <a href={props.project.link_generic} target="_blank">
+                <h4>More Info</h4>
+                <i className="material-icons">link</i>
+            </a>
+        );
+    }
 
     return(
         <Grid className='displayBox'> 
@@ -63,8 +80,8 @@ export default function ProjectDisplay(props) {
                     <h3>What I Used</h3>
                 </Col>
                 <Col xs={12} md={10}>
-                    <h3 className='highlight'><i class="material-icons">code</i>{props.project.languages_used.join(", ")}</h3>
-                    <h3 className='highlight'><i class="material-icons">build</i>{props.project.tools_used.join(", ")}</h3>
+                    <h3 className='highlight'><i className="material-icons">code</i>{props.project.languages_used.join(", ")}</h3>
+                    <h3 className='highlight'><i className="material-icons">build</i>{props.project.tools_used.join(", ")}</h3>
                 </Col>
             </Row>
             <Row>
@@ -94,6 +111,10 @@ export default function ProjectDisplay(props) {
                 </Col>
             </Row>
             <Row>
+            <Col xs={12} className="linkSection">
+                {gitLink}
+                {genLink}
+            </Col>
             <Col xs={12}>
                 <p className='tags'>Search tags: {props.project.tags.join(", ")}</p>
             </Col>

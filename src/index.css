@@ -47,6 +47,12 @@ a:hover {
   color: #bdd9f5;
 }
 
+
+a i:hover{
+  color: #bdd9f5;
+}
+
+
 /* Defining new fonts */
 
 @font-face {
