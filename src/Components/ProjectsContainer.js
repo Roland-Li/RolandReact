@@ -48,17 +48,48 @@ export default class ProjectsContainer extends Component {
         //Loop through the projects list and select the ones matching the searchText
         var newSelectedProjects = [];
         for (var i = 0, len = this.state.projects.length; i < len; i++) { 
-            // console.log("checking " + this.state.projects[i].title); 
-            //Check the title
-            if (this.state.projects[i].title.toLowerCase().startsWith(newSearchText)){
-                // console.log("Matching " + this.state.projects[i].title);
-                newSelectedProjects.push(this.state.projects[i]);
-                continue;
+            //Split the text and process the various possible tags
+            //Allow comma or whitespace
+            var searchTerms = newSearchText.split(/[ ,]+/);
+
+            //Check the query
+            var matchedTags = false;
+
+            for (var j = 0, len2 = searchTerms.length; j < len2; j++){
+                if (searchTerms[j].startsWith("tag:")){
+                    var val = searchTerms[j].substring(4);
+                    matchedTags = ( val != "" && this.state.projects[i].tags.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
+                    if (!matchedTags) { break; } //Repeat this check/continue for performance
+                    continue;
+                }
+
+                if (searchTerms[j].startsWith("lang:")){
+                    var val = searchTerms[j].substring(5);
+                    matchedTags = ( val != "" && this.state.projects[i].languages_used.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
+                    if (!matchedTags) { break; }
+                    continue;
+                }
+
+                if (searchTerms[j].startsWith("tool:")){
+                    var val = searchTerms[j].substring(5);
+                    matchedTags = ( val != "" && this.state.projects[i].tools_used.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
+                    if (!matchedTags) { break; }
+                    continue;
+                }
+
+                //Treat it as the name of the project instead
+                if (this.state.projects[i].title.toLowerCase().startsWith(searchTerms[j])){
+                    matchedTags = true;
+                    if (!matchedTags) { break; }
+                    continue;
+                }
+
+                matchedTags = false;
+                break; //Exit if it's not a searchable thing
             }
 
-            //Check tags
-            for (var j = 0, len2 = this.state.projects[i].tags.length; j < len2; j++){
-
+            if (matchedTags) {
+                newSelectedProjects.push(this.state.projects[i]);
             }
         }
 

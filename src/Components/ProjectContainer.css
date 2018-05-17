@@ -90,6 +90,7 @@
 
 .linkSection{
     text-align:center;
+    margin-bottom:10px;
 }
 
 .linkSection h4{
@@ -116,6 +117,7 @@ a i {
 
 .itemBox:hover{
     border: 2px solid #bdd9f5;
+    cursor: pointer;
 }
 
 .itemBox h3, .topTags{
@@ -142,13 +144,13 @@ a i {
     right:0;
     height:100%;
     width:20%;
-    background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, #ebf4fc 80%);
-    background: -webkit-gradient(linear, top left, top right, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,#ebf4fc));
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
-    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
-    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,#ebf4fc 80%);
-    background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #ebf4fc 80%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ebf4fc',GradientType=0 );
+    background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, #f7f7f7 80%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,#f7f7f7));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,#f7f7f7 80%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,#f7f7f7 80%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,#f7f7f7 80%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #f7f7f7 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f7f7f7',GradientType=0 );
 }
 
 .itemTitle{
@@ -164,7 +166,7 @@ a i {
     right: 0;
     width: 15%;
     height: 2em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f7f7 50%);
 }
 
 .itemInfo{
@@ -188,7 +190,7 @@ a i {
     right: 0;
     width: 15%;
     height: 1.4em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebf4fc 50%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f7f7 50%);
 }
 
 .bottomTags{
