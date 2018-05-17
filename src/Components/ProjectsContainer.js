@@ -146,7 +146,7 @@ export default class ProjectsContainer extends Component {
                         <FormControl
                             type="text"
                             value={this.state.searchText}
-                            placeholder="Filter projects via title, tags, language, etc"
+                            placeholder="Filter projects via query: { tag:*, lang:*, tool:* }"
                             onChange={this.handleSearchChange}
                             onSubmit={(e) => {
                                 /**
