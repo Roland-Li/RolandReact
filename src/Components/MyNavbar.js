@@ -2,22 +2,8 @@ import React, { Component } from 'react';
 import {Navbar,Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap'
 import "./MyNavbar.css"
 
-class MyNavbar extends Component {
-    // deleteProject(id){
-    //     this.props.onDelete(id);
-    // }
-    
+export default class MyNavbar extends Component {
     render() {
-        // let projectItems;
-        // if(this.props.projects){
-        //     projectItems = this.props.projects.map(project => {
-        //         //console.log(project);
-        //         return (
-        //             <ProjectItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
-        //         );
-        //     });
-        // }
-        
         return (
             <Navbar inverse collapseOnSelect className="MyNavbar">
                 <Navbar.Header>
@@ -32,13 +18,13 @@ class MyNavbar extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="#">
+                        <NavItem eventKey={1} href="#sectionProjects">
                             Projects
                         </NavItem>
-                        <NavItem eventKey={2} href="#">
+                        <NavItem eventKey={2} href="#sectionResume">
                             Resume
                         </NavItem>
-                        <NavItem eventKey={3} href="#">
+                        <NavItem eventKey={3} href="#sectionContact">
                             Contact
                         </NavItem>
                     </Nav>
@@ -47,10 +33,3 @@ class MyNavbar extends Component {
         );
     }
 }
-
-// Navbar.propTypes = {
-//     projects: React.PropTypes.array,
-//     onDelete: React.PropTypes.func
-// }
-
-export default MyNavbar;

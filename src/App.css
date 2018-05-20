@@ -1,3 +1,13 @@
 .App {
   text-align: left;
 }
+
+.sectionHeader h2{
+  text-align: center;
+  margin:0;
+}
+
+.sectionHeader {
+  background-color: #1b68b5;
+  padding:10px;
+}

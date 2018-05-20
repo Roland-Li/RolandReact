@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Grid,Row,Col} from 'react-bootstrap'; //Everything is going to want to use grids
+import {Row,Col} from 'react-bootstrap'; 
 
 
 export default function ProjectItem(props) {
