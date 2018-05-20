@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+//Child components
 import MyNavbar from './Components/MyNavbar';
 import ProjectsContainer from './Components/ProjectsContainer';
 import ResumeContainer from './Components/ResumeContainer.js';
 import ContactContainer from './Components/ContactContainer.js';
 
+//Extras
+import animateScrollTo from 'animated-scroll-to';
 import {Row,Column} from 'react-bootstrap';
 
 class App extends Component {
@@ -50,7 +54,7 @@ class App extends Component {
         <br/>
         <ContactContainer/>
         <br/>
-        
+
       </div>
     );
   }

@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import {Navbar,Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap'
 import "./MyNavbar.css"
 
+import animateScrollTo from 'animated-scroll-to';
+
 export default class MyNavbar extends Component {
+
+    iCri(){
+        console.log(document.getElementById('sectionProjects'));
+    }
+
     render() {
         return (
             <Navbar inverse collapseOnSelect className="MyNavbar">
@@ -18,13 +25,13 @@ export default class MyNavbar extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="#sectionProjects">
+                        <NavItem eventKey={1} onClick={()=>{animateScrollTo(document.getElementById('sectionProjects'))}}>
                             Projects
                         </NavItem>
-                        <NavItem eventKey={2} href="#sectionResume">
+                        <NavItem eventKey={2} onClick={()=>{animateScrollTo(document.getElementById('sectionResume'))}}>
                             Resume
                         </NavItem>
-                        <NavItem eventKey={3} href="#sectionContact">
+                        <NavItem eventKey={3} onClick={()=>{animateScrollTo(document.getElementById('sectionContact'))}}>
                             Contact
                         </NavItem>
                     </Nav>
