@@ -10,7 +10,7 @@ export default class MyNavbar extends Component {
             <Navbar inverse fixedTop="true" collapseOnSelect className="MyNavbar">
                 <Navbar.Header>
                     <Navbar.Brand className="MyNavbar-Brand">
-                        <a href="#MyNavbar">
+                        <a onClick={()=>{animateScrollTo(0)}}>
                         <div id="header-p1">Roland</div>
                         <div id="header-p2">Li</div>
                         <div id="header-p3">.xyz</div>

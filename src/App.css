@@ -16,10 +16,31 @@
   padding:10px;
 }
 
+/* Generic Stuff */
 .importantTextArea{
   text-align: center;
 }
 
 canvas{
   margin: 0 auto;
+}
+
+.linkIcon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Contact Container */
+.contactContainer{
+  text-align:left;
+}
+
+.linkBox{
+  width:300px;
+  margin:0 auto;
+}
+
+.contactContainer h3{
+  margin:10px 10px;
+  display: inline-block;
 }
