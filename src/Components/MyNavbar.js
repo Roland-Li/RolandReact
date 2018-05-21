@@ -5,14 +5,9 @@ import "./MyNavbar.css"
 import animateScrollTo from 'animated-scroll-to';
 
 export default class MyNavbar extends Component {
-
-    iCri(){
-        console.log(document.getElementById('sectionProjects'));
-    }
-
     render() {
         return (
-            <Navbar inverse collapseOnSelect className="MyNavbar">
+            <Navbar inverse fixedTop="true" collapseOnSelect className="MyNavbar">
                 <Navbar.Header>
                     <Navbar.Brand className="MyNavbar-Brand">
                         <a href="#MyNavbar">

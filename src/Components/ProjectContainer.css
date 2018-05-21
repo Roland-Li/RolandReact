@@ -6,7 +6,7 @@
 
 /* Project Container/Box Layouts _____________________________________________________ */
 .projectWindow{
-    height: 80vh;
+    height: 72vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-right:0px;

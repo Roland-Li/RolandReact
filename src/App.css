@@ -2,6 +2,10 @@
   text-align: left;
 }
 
+.App-header{
+  margin-bottom:50px;
+}
+
 .sectionHeader h2{
   text-align: center;
   margin:0;
@@ -10,4 +14,8 @@
 .sectionHeader {
   background-color: #1b68b5;
   padding:10px;
+}
+
+.importantTextArea{
+  text-align: center;
 }
