@@ -18,8 +18,10 @@ export default function ResumeContainer(props) {
     }
     else{
         //Mobile
-        pageWidth = pageWidth - 30;
+        pageWidth = pageWidth;
     }
+
+    pageWidth = pageWidth - 30; //Padding from container
     
     return(
         <Grid>

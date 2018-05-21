@@ -19,3 +19,7 @@
 .importantTextArea{
   text-align: center;
 }
+
+canvas{
+  margin: 0 auto;
+}
