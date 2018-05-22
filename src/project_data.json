@@ -76,7 +76,7 @@
     },
     {
     "id":6,
-    "tags": [ "automation" , "back-end", "co-op" , "" ],
+    "tags": [ "automation" , "environment", "co-op" , "solo" ],
     "languages_used": [ "Bash" , "Java" ],
     "tools_used": [ "Unix" , "Rundeck" , "Calypso" ],
     "date": "20180320",
