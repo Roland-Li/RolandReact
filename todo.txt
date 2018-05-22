@@ -1,24 +1,28 @@
 Next Tasks:
+
+-Navbar
+    -Make link highlighting change while you scroll
+
+- *New* Add Personal Intro section
+    -Gist of who I am personally
+
 -Project Selection Area
-    -Add advanced filtering. Split the input, store into variables, multistage.
-        -Search optimization? Don't use base projects group each time, use previously filtered list.
     -Make the page as whole scale better to higher resolutions 
-        -Navbar and project selection areas are too small
         -Image is too small now, though it maintains ratio; which is good. Add second image?
+
 -Project View Area
     -Make something nicer for project image
         -Maybe a scrollable section with click to expand
+    -Add date (Year Month)
+
 -Resume View
-    -Include link for PDF
-    -Figure out specifics; maybe just embed the PDF somehow
+    
 -Contact View
-    -Need a backend to send out emails?
-    -Social media stuff etc
--Misc
-    -Draw a new icon for the website (SVG?)
+    -Maybe embedded emails, but it's not very worthwhile
+
+
 
 Projects to add:
--Automating with rundeck
 -This website
 
 

@@ -73,6 +73,21 @@
     "link_git":"",
     "link_generic":"",
     "awards":[ ]
+    },
+    {
+    "id":6,
+    "tags": [ "automation" , "back-end", "co-op" , "" ],
+    "languages_used": [ "Bash" , "Java" ],
+    "tools_used": [ "Unix" , "Rundeck" , "Calypso" ],
+    "date": "20180320",
+    "title": "Continuos Delivery Automation",
+    "project_description": "The automation of tasks required to get a build from dev to PROD. This project involved connecting various tasks and scripts our QA/Release Management team would normally do manually, and allow it to be easily triggered and done autonomously via an UI (Rundeck). I did not take any photos of the project itself, nor kept source code due to company policy (so no links or pics).",
+    "work_description": "I worked solo on this project, and was tasked to automate our typical workflow for 2 applications. It was my job to figure out what needed to be done, and how to do it. This required a lot of planning, with small specifics regarding environment management to consider. I wanted the end product to require as little maintenance as possible, while covering common fail cases. This included running out of environment storage or RAM, builds or deployments failing, cookies expiring, and changes in naming conventions. For example, to save storage, I changed our setup to keep a copy of builds on one drive, before SSHing into our other environments. Since we often had to deploy different versions to environments, I made the system do so in parallel to reduce time.\\n I wireframed and flowcharted my plan and presented my ideas before moving forward. Ignoring smaller management steps and error checking, the end product worked as follows: Dev creates build, triggering job -> Build and other versions get installed on QA environments as required -> Scripts login to web interface to deploy required files -> Connection with our application triggers our QA test -> Results are reconciled into a report -> Report gets emailed directly to the team. And yes, I had a few other email points to alert the team on our build's progress!  In the end, I wrote about 30-40 Bash scripts and a couple of Java scripts to interface with our application! While the end product was flexible enough to be adapted to deploying to PAT and PROD, we never got there as we were waiting business approvals to do so.",
+    "learn_description": "As I worked on the project, I would often realize minor details that were important to be programmed around. For example. figuring out how to deploy our files to our web server was a bit convoluted, as corporate policy required us to go through it. In the end, I ended up using simple curl commands to login, cache cookies, and upload our required files. All in all, this project simply required me to learn a lot on my own. While I could, and sometimes did, reach out to coworkers, they were busy working on features instead, and weren't explicitly familiar with what I was doing. My investigative skills and patience were really pushed!",
+    "images": [ "rundeck1.png" , "rundeck2.png" ],
+    "link_git":"",
+    "link_generic":"",
+    "awards":[ ]
     }
 ]
 
