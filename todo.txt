@@ -14,12 +14,17 @@ Next Tasks:
     -Make something nicer for project image
         -Maybe a scrollable section with click to expand
     -Add date (Year Month)
+    -Add number of working hours
+
+-Stats section
 
 -Resume View
     
 -Contact View
     -Maybe embedded emails, but it's not very worthwhile
 
+-Footer
+    -Last update + Github link
 
 
 Projects to add:
