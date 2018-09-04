@@ -15,10 +15,13 @@ Next Tasks:
         -Maybe a scrollable section with click to expand
     -Add date (Year Month)
     -Add number of working hours
+    -Create a default image that doesn't show up on this screen (but does on selection area)
 
 -Stats section
 
 -Resume View
+    -Highlighted text is shifted downwards again
+    -Reload when page size/scaling occurs?
     
 -Contact View
     -Maybe embedded emails, but it's not very worthwhile

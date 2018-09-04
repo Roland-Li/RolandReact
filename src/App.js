@@ -21,8 +21,16 @@ class App extends Component {
   }
 
   componentWillMount(){
+    const script = document.createElement("script");
+    script.src = "particles.js";
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
+
+
+
     //Pull from file for now
-    var content = require("./project_data.json");
+    var content = require("./Data/project_data.json");
     this.setState({projects: content.sort((a, b) => parseFloat(b.date) - parseFloat(a.date))});
   }
 
@@ -33,6 +41,14 @@ class App extends Component {
         <header className="App-header">
         <MyNavbar />
         </header>
+        <div id="particles-js"></div>
+        <script src="particles.js"></script>
+        <script>
+        particlesJS.load('particles-js', './Data/particles.json', 
+        function() {
+          console.log('callback - particles.js config loaded')
+        });
+        </script>
 
         <div className="sectionHeader" id="sectionProjects">
           <h2>Project Portfolio</h2>
