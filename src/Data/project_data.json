@@ -103,6 +103,21 @@
     "link_git":"",
     "link_generic":"",
     "awards":[ ]
-    }
+    },
+    {
+    "id":8,
+    "tags": [ "machine-learning", "data" , "web-scrapping", "solo" ],
+    "languages_used": [ "Python" ],
+    "tools_used": [ "TensorFlow" , "sqlite", "TD Da Vinci" ],
+    "date": "20180918",
+    "title": "CouponIT",
+    "project_description": "The idea is to allow retailers to effectively price discriminate their customers and maximize profits by providing the optimal discount rate to convert a specific individual into a user. In order to determine this rate, their transactional data and demographics are analyzed through the use of TD Da Vinci, which provides the data set. By determining the amount, they spend between the company and it’s competitors, a priority score is generated. This number, as well as demographic data, is fed into a ML model, which will determine a function using these variables, giving us a way to accurately determine an effective coupon rate for each individual. Data is then recollected post coupon distribution, where the change in score will signify the success of the proposed rate- thus training the model for future iterations.",
+    "work_description": "This project represented the first time I seriously used Python, my first attempt in delving into proper data analysis, and my first-time exploring ML algorithms.  I had to learn a lot from tutorials, and it was hours after I first decided on the idea until I figured out how I would be applying ML to the data set and how I would train it. All in all, while the number of lines of code wasn’t large, I learned a lot, and ultimately ended up doing most of the work within one long 12-hour time frame!",
+    "learn_description": "Besides getting more insight on the topics above, in general it was a great way to learn about some of the quirks of the language. For example, I ran into a lot of trouble converting values between Python, my SQLite database, URL requests, and JSON in general. Figuring out how to store floats and complex non-string escaped text and ensure they would be converted between formats was troubling at times, but I figured it out!",
+    "images": [ "couponit.png" ],
+    "link_git":"https://github.com/Roland-Li/coupon-analysis",
+    "link_generic":"https://devpost.com/software/ml-couponing-for-maximizing-user-conversion",
+    "awards":[ ]
+    }    
 ]
 
