@@ -6,6 +6,16 @@
   margin-bottom:50px;
 }
 
+/* ---- particles.js container ---- */ 
+#particles-js{ 
+  height: 72vh;
+  background-color: #2c2e43;
+  background-image: url(""); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: 50% 50%; 
+}
+
 .sectionHeader h2{
   text-align: center;
   margin:0;
