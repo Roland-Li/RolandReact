@@ -11,6 +11,9 @@ import ContactContainer from './Components/ContactContainer.js';
 //Extras
 import animateScrollTo from 'animated-scroll-to';
 import {Row,Column} from 'react-bootstrap';
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-126492852-1');
 
 class App extends Component {
   constructor(){
@@ -21,12 +24,15 @@ class App extends Component {
   }
 
   componentWillMount(){
+    //Fire analytics
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
+    //Particle js stuff
     const script = document.createElement("script");
     script.src = "particles.js";
     script.type = 'text/javascript';
     script.async = true;
     document.body.appendChild(script);
-
 
 
     //Pull from file for now
