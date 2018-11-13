@@ -7,7 +7,6 @@ import MyNavbar from './Components/MyNavbar';
 import ProjectsContainer from './Components/ProjectsContainer';
 import ResumeContainer from './Components/ResumeContainer.js';
 import ContactContainer from './Components/ContactContainer.js';
-import ParticleContainer from './Components/ParticleContainer.js';
 
 //Extras
 import animateScrollTo from 'animated-scroll-to';
@@ -29,11 +28,11 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname + window.location.search);
 
     //Particle js stuff
-    // const script = document.createElement("script");
-    // script.src = "particles.js";
-    // script.type = 'text/javascript';
-    // script.async = true;
-    // document.body.appendChild(script);
+    const script = document.createElement("script");
+    script.src = "particles.js";
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
 
 
     //Pull from file for now
@@ -48,8 +47,14 @@ class App extends Component {
         <header className="App-header">
         <MyNavbar />
         </header>
-
-        <ParticleContainer/>
+        <div id="particles-js"></div>
+        <script src="particles.js"></script>
+        <script>
+        particlesJS.load('particles-js', './Data/particles.json', 
+        function() {
+          console.log('callback - particles.js config loaded')
+        });
+        </script>
 
         <div className="sectionHeader" id="sectionProjects">
           <h2>Project Portfolio</h2>
