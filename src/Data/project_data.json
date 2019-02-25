@@ -118,6 +118,36 @@
     "link_git":"https://github.com/Roland-Li/coupon-analysis",
     "link_generic":"https://devpost.com/software/ml-couponing-for-maximizing-user-conversion",
     "awards":[ ]
+    },
+    {
+    "id":9,
+    "tags": [ "analysis", "data", "group", "hackathon" ],
+    "languages_used": [ "Javascript" ],
+    "tools_used": [ "Amazon S3" , "stdlib", "Google Cloud" ],
+    "date": "20181124",
+    "title": "SayfeZone",
+    "project_description": "Our idea for this project was to develop a cheaply and easily scalable security system to help protect bullied individuals. By flagging and alerting specific video chunks featuring high negative sentiment, school administrators can periodically review these chunks and confirm bullying scenarios, targeting otherwise difficult to target scenarios.",
+    "work_description": "In this project, I took on a project coordinator role and was responsible for conceptualizing our idea and planning out our stack and plan of attack. Work-wise, I handled creating our front-end stream of the site, working with the back-end to ensure we can quickly develop something to display a video stream by chunking video recordings.",
+    "learn_description": "While our development was strong, I think ultimately the pretense of our idea pushed judges away from our project. We put too much emphasis on our idea, and should have planned out a stronger foundation that could have sold better. I believe ultimately, this project taught me a few things about how I should manage teams in the future, and balance the need of brainstorming and focus.",
+    "images": [ "sayfezone.png" ],
+    "link_git":"https://arthurg.github.io/SayfeZone-Frontend/index.html",
+    "link_generic":"https://devpost.com/software/sayfezone",
+    "awards":[ ]
+    },
+    {
+    "id":10,
+    "tags": [ "UI", "design", "solo", "school" ],
+    "languages_used": [ "C++", "Java" ],
+    "tools_used": [ "Swing" , "X-Window" ],
+    "date": "20181125",
+    "title": "UI Projects (School)",
+    "project_description": "No code links due to academic integrity requirements. Throughout the term, we tackled personal projects such as developing a brick-breaker game, a paint/drawing applet, a rag-doll manipulating applet, and a photo-rating Android app.",
+    "work_description": "These projects served as practical applications of various concepts we've learned in class. In doing so, we worked on a lower-level window manager, X-Windows, to develop apps. While the first project was made using C++, future assignments used Java.",
+    "learn_description": "Throughout the course of various assignments, we learned how to handle events, drawing, MVC, and various other UI/UX design theories. This course was very useful, as it provided exposure to the importance of proper UX through multi-threading, good feedback, and smart design.",
+    "images": [ "ui.png" ],
+    "link_git":"",
+    "link_generic":"",
+    "awards":[ ]
     }    
 ]
 
