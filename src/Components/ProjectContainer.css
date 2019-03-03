@@ -19,6 +19,14 @@
     }
 }
 
+.filterInput{
+    height:2.5em;
+    line-height:2.5em;
+}
+
+::placeholder {
+    overflow: unset;
+}
 
 /* Project Display Layout _____________________________________________________ */
 .displayBox{
@@ -154,7 +162,8 @@ a i {
 }
 
 .itemTitle{
-    height: 2em;
+    height: 2.5em;
+    line-height: 2.5em;
     overflow: hidden;
 }
 
