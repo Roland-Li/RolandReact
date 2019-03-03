@@ -66,7 +66,7 @@ export default function ProjectDisplay(props) {
             <Row>
                 <Col xs={12}>
                   <h2>{props.project.title}</h2>
-                  <Button className='exitButton' onClick={handleClick} bsStyle='primary'><h3>X</h3></Button>
+                  <Button className='exitButton' onClick={handleClick} bsStyle='primary'><span>X</span></Button>
                 </Col>
             </Row>
             <Row>
@@ -116,7 +116,7 @@ export default function ProjectDisplay(props) {
                 {genLink}
             </Col>
             <Col xs={12}>
-                <p className='tags'>Search tags: {props.project.tags.join(", ")}</p>
+                <p className='tags lightText'>Search tags: {props.project.tags.join(", ")}</p>
             </Col>
             </Row>
         </Grid>

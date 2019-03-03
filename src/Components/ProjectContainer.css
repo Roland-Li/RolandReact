@@ -64,7 +64,6 @@
 }
 
 .displayBox .tags{
-    color: #bdd9f5;
     text-align: center;
 }
   
@@ -92,10 +91,12 @@
     height: 40px;
     position: absolute;
     background-color: #3a8ee2;
+    text-align: center;
 }
 
-.exitButton h3{
-    margin-top:3px;
+.exitButton span{
+    font-size:16px;    
+    font-family:'Junction';
 }
 
 .linkSection{
