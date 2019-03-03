@@ -144,7 +144,7 @@ export default class ProjectsContainer extends Component {
                     <form onSubmit={this.onSubmitSearch}>
                     <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                         <FormControl 
-                            className="filterInput"
+                            id="filterInput"
                             type="text"
                             value={this.state.searchText}
                             placeholder="Filter projects via query: { tag:*, lang:*, tool:* }"

@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+#nav1{
+    color:#fff
+}
+
 /* Logo/Brand stuff ______________________________________________________*/
 .MyNavbar-Brand{
    font-family: 'Junction';

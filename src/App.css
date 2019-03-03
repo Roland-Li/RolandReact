@@ -38,6 +38,7 @@ canvas{
 .linkBox{
   width:300px;
   margin:0 auto;
+  padding-bottom:15px;
 }
 
 .contactContainer h3{

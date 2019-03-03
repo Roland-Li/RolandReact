@@ -1,14 +1,11 @@
 Next Tasks:
 
 -Navbar
-    -Make link highlighting change while you scroll
 
 - *New* Add Personal Intro section
     -Gist of who I am personally
 
 -Project Selection Area
-    -Make the page as whole scale better to higher resolutions 
-        -Image is too small now, though it maintains ratio; which is good. Add second image?
 
 -Project View Area
     -Make something nicer for project image
