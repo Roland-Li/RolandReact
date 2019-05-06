@@ -85,17 +85,18 @@
 }
 
 .exitButton{
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
+    top:10px;
+    right:10px;
+    width:40px;
+    height:40px;
     position: absolute;
     background-color: #3a8ee2;
     text-align: center;
+    vertical-align: bottom;
 }
 
 .exitButton span{
-    font-size:16px;    
+    font-size:12px;    
     font-family:'Junction';
 }
 
@@ -154,7 +155,7 @@ a i {
     top:0;
     right:0;
     height:100%;
-    width:23%;
+    width:25%;
     background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, #f7f7f7 80%);
     background: -webkit-gradient(linear, top left, top right, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,#f7f7f7));
     background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,#f7f7f7 80%);
