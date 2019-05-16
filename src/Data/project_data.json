@@ -148,6 +148,21 @@
     "link_git":"",
     "link_generic":"",
     "awards":[ ]
-    }    
+    },
+    {
+    "id":11,
+    "tags": [ "co-op", "UX", "design", "app" ],
+    "languages_used": [ "Kotlin", "Java" ],
+    "tools_used": [ "Android" , "Figma" ],
+    "date": "20190401",
+    "title": "reebee",
+    "project_description": "For my Winter 2019 co-op term, I was given the privilege to work on developing core features for the reebee application. Our value proposition? To provide users a seamless way to browse flyers and save money in a sleek and intuitive package. In order to accomplish this, reebee serves flyers based on user location, letting them search for specific products through search, and manage a shopping list of said products. My job was to continue to support this core offering and bolster UX, without watering it down with unnecessary feature creep.",
+    "work_description": "Some of the UX features I worked on included:\n-Enabled the app to be index by Firebase and subsequently accessible through Google Assistant.\n-Auto searching on item add & smoother animations. This proved to complicated as state had to be managed across multiple files, while possibly being interupted by syncing and user manipulation.\n-Settings to delete expired items, keeping them informed with toast messages as needed. Design considerations needed to be made to ensure users knew what was occurring at different stages.\n\nLarger, core features that I’ve designed include:\n-Deep-linking with Amazon associate links. As we currently flyer-tied search results, I wanted a way to provide potentially relevant items when no related items were returned. I prototyped a simple design to display and link to Amazon items, which could also act as an additional source of revenue.\n-Hot-feed widget. By utilizing our search API, provide users a self-updating feed of recently added/updated deals based off entered search terms. Designed and shelved in favor of other features.\n-Speak-to-add widget. As Google assistant did not yet allow custom commands, provide a widget to allow users to directly enter/add/search items by speaking. Lots of prototyping and design iterations went into this and is planned for release.\n-Sharable multi-search. This design was inspired with our new partnership with recipe bloggers- I wanted to create a more convenient expierence for users to search for deals on recipe ingredients. I also saw this as an opportunity to tie into a long-requested feature by users- sharable shopping lists. I prototyped a design and feedback was overwhelmingly positive!",
+    "learn_description": "All things Android! Through creating core features, I was able to experience many concepts like fragment management, life cycle, events, handling asynchronous calls, recyclers and adapters, widgets, state & intent handling, and probably much more. On top of this, I was given the opportunity to work on features I self-pitched, conceptualized through our analytic data & user feedback. In order to get these features designed and iterated on, I decided to pick up mockup software called Figma, allowing me to create designs closer to the end-product. Interestingly, my manager's open nature allowed me an opportunity to discuss and impact our management processes as well, which was a great perspective to learn from.",
+    "images": [ "reebee.png" ],
+    "link_git":"",
+    "link_generic":"https://play.google.com/store/apps/details?id=com.reebee.reebee",
+    "awards":[ "Outstanding Feedback + Recommendation" ]
+    }
 ]
 

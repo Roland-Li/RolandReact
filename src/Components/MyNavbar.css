@@ -30,14 +30,17 @@
 
 .MyNavbar-Brand:hover #header-p1{
     color:#3a8ee2; 
+    cursor: pointer;
 }
 
 .MyNavbar-Brand:hover #header-p2{
     color:#fff;
+    cursor: pointer;
 }
 
 .MyNavbar-Brand:hover #header-p3{
     color: #cdcdcd;
+    cursor: pointer;
 }
 
 #header-p1{

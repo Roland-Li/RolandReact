@@ -33,6 +33,7 @@
 /* Project Display Layout _____________________________________________________ */
 .displayBox{
     border: 2px solid #feffff;
+    white-space: pre-line;
 }
 
 .displayBox img {
