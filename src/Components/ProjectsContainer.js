@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
 import ProjectItem from './ProjectItem';
 import ProjectDisplay from './ProjectDisplay';
-import {Grid, Row, Col, Clearfix, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap'; //Everything is going to want to use grids
+import {Grid, Row, Col, Clearfix, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap'; // Everything is going to want to use grids
 import "./ProjectContainer.css";
 
-//Wireframe 1: https://wireframe.cc/6Buzm0
+// Wireframe 1: https:// wireframe.cc/6Buzm0
 
-//Has the elements for all things project-related, even the display
+// Has the elements for all things project-related, even the display
 export default class ProjectsContainer extends Component {
     constructor(props, context) {
         super(props, context);
         this.handleSearchChange = this.handleSearchChange.bind(this);
         this.onClickProject = this.onClickProject.bind(this);
 
-        //this.updateSelectedProjects = this.updateSelectedProjects.bind(this);
+        // this.updateSelectedProjects = this.updateSelectedProjects.bind(this);
     
         this.state = {
           searchText: '',
           showSearchWarning: 'False',
           projects: props.projects,
           selectedProjects: props.projects,
-          displayProject: -1 //Reference project by ID instead of making a copy of the project object
+          displayProject: -1 // Reference project by ID instead of making a copy of the project object
         };
     } 
 
     getValidationState() {
-        //Check whether or not there are valid projects fitting this,
-        //and update the selected projects list accordingly
+        // Check whether or not there are valid projects fitting this,
+        // and update the selected projects list accordingly
         const length = this.state.selectedProjects.length;
 
         if (length == 0){
@@ -36,7 +36,7 @@ export default class ProjectsContainer extends Component {
             return 'error'; 
         }
         else  {
-            //Have to if check or else it'll recurse
+            // Have to if check or else it'll recurse
             if (this.state.showSearchWarning != 'False') {
                 this.setState({ showSearchWarning: 'False'});
             }
@@ -45,47 +45,49 @@ export default class ProjectsContainer extends Component {
     }
 
     getUpdatedSelection(newSearchText){
-        //Loop through the projects list and select the ones matching the searchText
+        // Loop through the projects list and select the ones matching the searchText
         var newSelectedProjects = [];
-        for (var i = 0, len = this.state.projects.length; i < len; i++) { 
-            //Split the text and process the various possible tags
-            //Allow comma or whitespace
-            var searchTerms = newSearchText.split(/[ ,]+/);
 
-            //Check the query
+        // Simple function that returns whether or not one of the set starts with the given prefix
+        function tagInSet(set, prefix){
+            return prefix != "" && set.some( (val) => { return val.toLowerCase().startsWith(prefix) } )
+        }
+
+        // Split the text and process the various possible tags
+        // Allow comma or whitespace
+        var searchTerms = newSearchText.split(/[ ,]+/);
+
+        for (var i = 0, len = this.state.projects.length; i < len; i++) { 
+            // Check the query
             var matchedTags = false;
 
+            //  Loop through all the provided search terms and see if they match (needs to match all)
             for (var j = 0, len2 = searchTerms.length; j < len2; j++){
                 if (searchTerms[j].startsWith("tag:")){
-                    var val = searchTerms[j].substring(4);
-                    matchedTags = ( val != "" && this.state.projects[i].tags.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
-                    if (!matchedTags) { break; } //Repeat this check/continue for performance
-                    continue;
+                    var prefix = searchTerms[j].substring(4);
+                    matchedTags = tagInSet(this.state.projects[i].tags, prefix)
                 }
 
-                if (searchTerms[j].startsWith("lang:")){
-                    var val = searchTerms[j].substring(5);
-                    matchedTags = ( val != "" && this.state.projects[i].languages_used.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
-                    if (!matchedTags) { break; }
-                    continue;
+                else if (searchTerms[j].startsWith("lang:")){
+                    var prefix = searchTerms[j].substring(5);
+                    matchedTags = tagInSet(this.state.projects[i].languages_used, prefix)
                 }
 
-                if (searchTerms[j].startsWith("tool:")){
-                    var val = searchTerms[j].substring(5);
-                    matchedTags = ( val != "" && this.state.projects[i].tools_used.some( (tag) => { return tag.toLowerCase().startsWith(val)} ));
-                    if (!matchedTags) { break; }
-                    continue;
+                else if (searchTerms[j].startsWith("tool:")){
+                    var prefix = searchTerms[j].substring(5);
+                    matchedTags = tagInSet(this.state.projects[i].tools_used, prefix)
+                }
+                else {
+                    // Check against the title, tag, lang, and tool instead
+                    matchedTags = (
+                        this.state.projects[i].title.toLowerCase().startsWith(searchTerms[j]) || 
+                        tagInSet(this.state.projects[i].tags, searchTerms[j]) ||
+                        tagInSet(this.state.projects[i].languages_used, searchTerms[j]) ||
+                        tagInSet(this.state.projects[i].tools_used, searchTerms[j])
+                    )
                 }
 
-                //Treat it as the name of the project instead
-                if (this.state.projects[i].title.toLowerCase().startsWith(searchTerms[j])){
-                    matchedTags = true;
-                    if (!matchedTags) { break; }
-                    continue;
-                }
-
-                matchedTags = false;
-                break; //Exit if it's not a searchable thing
+                if (!matchedTags) { break; } // Exit if the term matches nothing
             }
 
             if (matchedTags) {
@@ -93,7 +95,7 @@ export default class ProjectsContainer extends Component {
             }
         }
 
-        //Update
+        // Update
         return newSelectedProjects;
     }
 
@@ -101,12 +103,12 @@ export default class ProjectsContainer extends Component {
         var newSearchText = e.target.value.toLowerCase();
 
         if (newSearchText.length > 0){
-            //Pass it so it's faster than waiting for updated state value
+            // Pass it so it's faster than waiting for updated state value
             var newSelectedProjects = this.getUpdatedSelection(newSearchText);
             this.setState({selectedProjects: newSelectedProjects, searchText: newSearchText });
         }
         else {
-            //Reset back to showing all
+            // Reset back to showing all
             this.setState({selectedProjects: this.state.projects, searchText: newSearchText });
         }
     }
@@ -124,7 +126,7 @@ export default class ProjectsContainer extends Component {
     }
     
     render (){
-        //Either display a selected project, or display the nav section to allow one to be chosen
+        // Either display a selected project, or display the nav section to allow one to be chosen
         if (this.state.displayProject != '-1'){
             return(
                 <ProjectDisplay project={this.state.selectedProjects[this.state.displayProject]} onClickProject={this.onClickProject}/>
