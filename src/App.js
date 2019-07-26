@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 //Child components
@@ -9,8 +8,6 @@ import ResumeContainer from './Components/ResumeContainer.js';
 import ContactContainer from './Components/ContactContainer.js';
 
 //Extras
-import animateScrollTo from 'animated-scroll-to';
-import {Row,Column} from 'react-bootstrap';
 import ReactGA from 'react-ga'
 
 ReactGA.initialize('UA-126492852-1');
@@ -24,15 +21,15 @@ class App extends Component {
   }
 
   componentWillMount(){
-    //Fire analytics
+    //Firebase analytics
     ReactGA.pageview(window.location.pathname + window.location.search);
 
     //Particle js stuff
-    const script = document.createElement("script");
-    script.src = "particles.js";
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // script.src = "particles.js";
+    // script.type = 'text/javascript';
+    // script.async = true;
+    // document.body.appendChild(script);
 
 
     //Pull from file for now
@@ -47,6 +44,7 @@ class App extends Component {
         <header className="App-header">
         <MyNavbar />
         </header>
+        
         <div id="particles-js"></div>
         <script src="particles.js"></script>
         <script>
@@ -54,6 +52,7 @@ class App extends Component {
         function() {
           console.log('callback - particles.js config loaded')
         });
+
         </script>
 
         <div className="sectionHeader" id="sectionProjects">
